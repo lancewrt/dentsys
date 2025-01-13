@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './AppointmentForm.css'
 import io from 'socket.io-client';
 
-const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
+const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
 
 const AppointmentForm = () => {
     const navigate = useNavigate();
@@ -62,7 +62,7 @@ const AppointmentForm = () => {
 
     const getUnavailableTime = (date) => {
         const times = []
-        axios.get(`https://apidentsys.tuplrc-cla.com/api2/${date}/?action=getUnavailableTime`)
+        axios.get(`http://localhost:80/api2/${date}/?action=getUnavailableTime`)
           .then(response => {
             console.log(response.data)
             const results = response.data;
@@ -97,10 +97,10 @@ const AppointmentForm = () => {
         //logic: if hour24format (hour sa options) ay less than or equal doon sa current time AND yung piniling date ng user ay same sa date ngayon, return TRUE (ibig sabihin, disabled yung radio button na un)
         return hour24Format<=timeToday&&chosenDate==minDate;
     }
-
+    
     const getServices = async ()=> {
         try {
-            const response = await axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getServices');
+            const response = await axios.get('http://localhost:80/api2/?action=getServices');
             console.log('Full API response:', response);
             console.log('API response data:', response.data);
 
@@ -133,7 +133,7 @@ const AppointmentForm = () => {
             console.log('form submitted')
             setLoading(true);
                     try {
-                        const response = await axios.post("https://apidentsys.tuplrc-cla.com/api2/user/save", {loggedin:loggedin, ...formData,}).finally(() => setLoading(false));
+                        const response = await axios.post("http://localhost:80/api2/user/save", {loggedin:loggedin, ...formData,}).finally(() => setLoading(false));
                         console.log(response.data.status)
                         //if may nainsert na data, send event sa server (node)
                         if(response.data.status==1){
@@ -222,7 +222,7 @@ const AppointmentForm = () => {
                         <p className="error-message">{errors.phone}</p>
                     </div>
                     <hr className='my-5'/>
-                    <h5 className='text-center mb-5 labels'>Appointment Information</h5>
+                    <h5 className='text-center mb-5 accordion patient-info-text'>Appointment Information</h5>
                     <div className="col-12 mb-3">
                         <label htmlFor="" className="form-lavel labels">Type of Service <span className='required-field'>*</span></label>
                         <select class="form-select" aria-label="Default select example" id="service" name="service_" value={formData.service_} onChange={handleChange} onBlur={formValidation}>
@@ -280,7 +280,7 @@ const AppointmentForm = () => {
             </div>
             <div className="col-xl-6 col-sm-12 p-0">
                 <div className="summary appointment-summary">
-                    <h3 className='text-center mb-4 labels'>Appointment Summary</h3>
+                    <h5 className='text-center mb-5 accordion patient-info-text'>Appointment Summary</h5>
                     <div className="row appointment-summary-details">
                         <div className="col-4 mb-3 d-flex align-items-center labels">
                             Client name:
@@ -291,7 +291,7 @@ const AppointmentForm = () => {
                         <div className="col-4 mb-3 d-flex align-items-center labels">
                             Email:
                         </div>
-                        <div className="col-8 mb-3 client labels-email">
+                        <div className="col-8 mb-3 client labels-email labels">
                             {formData.email}
                         </div>
                         <div className="col-4 mb-3 d-flex align-items-center labels">
