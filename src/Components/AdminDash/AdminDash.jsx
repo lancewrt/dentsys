@@ -8,7 +8,7 @@ import isAuthenticated from '../Auth';
 import { Link, useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 const AdminDash = () => {
     //usestates for total num of pending, cancelled, recent, and upcoming appointments
@@ -54,7 +54,7 @@ const AdminDash = () => {
   },[]);
 
   const getUnavailableTime = () => {
-    axios.get('http://localhost:80/api2/?action=getUnavailableTime')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getUnavailableTime')
       .then(response => {
         console.log(response.data)
       })
@@ -65,7 +65,7 @@ const AdminDash = () => {
 
   // retrieve total number of pending appointments
   const getTotalPendingAppointments = () => {
-    axios.get('http://localhost:80/api2/?action=getPendingAppointments')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getPendingAppointments')
       .then(response => {
         setTotalPending(response.data.total_pending);
       })
@@ -76,7 +76,7 @@ const AdminDash = () => {
 
   //retrieve total number of upcoming appointments
   const getTotalUpcomingAppointments = () => {
-    axios.get('http://localhost:80/api2/?action=getUpcomingAppointments')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getUpcomingAppointments')
       .then(response => {
         setTotalUpcoming(response.data.total_upcoming);
       })
@@ -87,7 +87,7 @@ const AdminDash = () => {
 
   //retrieve total number of cancelled appointments
   const getTotalCancelledAppointments = () => {
-    axios.get('http://localhost:80/api2/?action=getCancelledAppointments')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getCancelledAppointments')
       .then(response => {
         setTotalCancelled(response.data.total_cancelled);
       })
@@ -98,7 +98,7 @@ const AdminDash = () => {
 
   //retrieve total number of recent visits
   const getTotalRecentVisits= () => {
-    axios.get('http://localhost:80/api2/?action=getRecentAppointments')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getRecentAppointments')
       .then(response => {
         setTotalRecentVisits(response.data.recent_visits);
       })
@@ -109,7 +109,7 @@ const AdminDash = () => {
 
   // retrieve earnings today
   const getEarningsToday = () => {
-    axios.get('http://localhost:80/api2/?action=getEarningsToday')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getEarningsToday')
       .then(response => {
         setEarningsToday(response.data.total_earnings);
       })
@@ -120,7 +120,7 @@ const AdminDash = () => {
 
   // retrieve appointments today
   const getAppointmentsToday = () => {
-    axios.get('http://localhost:80/api2/?action=getAppointmentsToday')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getAppointmentsToday')
       .then(response => {
         setAppToday(response.data);
       })
@@ -130,7 +130,7 @@ const AdminDash = () => {
   };
 
   const getRecentAppointmentDetails = () => {
-    axios.get('http://localhost:80/api2/?action=getRecentAppointmentDetails')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getRecentAppointmentDetails')
       .then(response => {
         console.log(response.data);
         if (Array.isArray(response.data)) {

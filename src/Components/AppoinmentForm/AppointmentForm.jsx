@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './AppointmentForm.css'
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 const AppointmentForm = () => {
     const navigate = useNavigate();
@@ -62,7 +62,7 @@ const AppointmentForm = () => {
 
     const getUnavailableTime = (date) => {
         const times = []
-        axios.get(`http://localhost:80/api2/${date}/?action=getUnavailableTime`)
+        axios.get(`https://apidentsys.tuplrc-cla.com/api2/${date}/?action=getUnavailableTime`)
           .then(response => {
             console.log(response.data)
             const results = response.data;
@@ -100,7 +100,7 @@ const AppointmentForm = () => {
 
     const getServices = async ()=> {
         try {
-            const response = await axios.get('http://localhost:80/api2/?action=getServices');
+            const response = await axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getServices');
             console.log('Full API response:', response);
             console.log('API response data:', response.data);
 
@@ -133,7 +133,7 @@ const AppointmentForm = () => {
             console.log('form submitted')
             setLoading(true);
                     try {
-                        const response = await axios.post("http://localhost:80/api2/user/save", {loggedin:loggedin, ...formData,}).finally(() => setLoading(false));
+                        const response = await axios.post("https://apidentsys.tuplrc-cla.com/api2/user/save", {loggedin:loggedin, ...formData,}).finally(() => setLoading(false));
                         console.log(response.data.status)
                         //if may nainsert na data, send event sa server (node)
                         if(response.data.status==1){

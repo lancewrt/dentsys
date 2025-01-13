@@ -5,7 +5,7 @@ import axios from 'axios';
 import isAuthenticated from '../Auth';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 
 const Reschedule = ({ onClose, keyOfSelectedAppointment, appointments}) => {
@@ -57,7 +57,7 @@ const Reschedule = ({ onClose, keyOfSelectedAppointment, appointments}) => {
         }else if(submitForm){
             try{
                 setLoading(true);
-                const response =await axios.put(`http://localhost:80/api2/${keyOfSelectedAppointment}/?action=reschedule`, input).finally(() => setLoading(false)); 
+                const response =await axios.put(`https://apidentsys.tuplrc-cla.com/api2/${keyOfSelectedAppointment}/?action=reschedule`, input).finally(() => setLoading(false)); 
                 console.log(response)
                 if(response.status==200){
                     socket.emit('newData');
@@ -71,7 +71,7 @@ const Reschedule = ({ onClose, keyOfSelectedAppointment, appointments}) => {
 
     const getUnavailableTime = (date) => {
         const times = []
-        axios.get(`http://localhost:80/api2/${date}/?action=getUnavailableTime`)
+        axios.get(`https://apidentsys.tuplrc-cla.com/api2/${date}/?action=getUnavailableTime`)
           .then(response => {
             console.log(response.data)
             const results = response.data;

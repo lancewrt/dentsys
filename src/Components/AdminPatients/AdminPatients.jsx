@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 const AdminPatients = () => {
   const [patients, setPatients] = useState([]);
@@ -23,7 +23,7 @@ const AdminPatients = () => {
   /* const fetchPatients = async (letter) => {
     setSelectedLetter(letter);
     try {
-      const response = await axios.get(`http://localhost:80/api2/?action=getPatientsByLetter&letter=${letter}`);
+      const response = await axios.get(`https://apidentsys.tuplrc-cla.com/api2/?action=getPatientsByLetter&letter=${letter}`);
       setPatients(response.data);
     } catch (error) {
       console.error("Error fetching patient data:", error);
@@ -50,7 +50,7 @@ const AdminPatients = () => {
     const offset = (page - 1) * LIMIT;
     setSelectedLetter(letter);
     try {
-      const response = await axios.get(`http://localhost:80/api2/?action=getPatientsByLetter&letter=${letter}&limit=${LIMIT}&offset=${offset}`);
+      const response = await axios.get(`https://apidentsys.tuplrc-cla.com/api2/?action=getPatientsByLetter&letter=${letter}&limit=${LIMIT}&offset=${offset}`);
       setPatients(response.data.patients);
       setTotalPatients(response.data.total);
       setCurrentPage(page);
@@ -73,7 +73,7 @@ const AdminPatients = () => {
   console.log(selectedLetter)
 
   /* function getPatients() {
-    axios.get('http://localhost:80/api2/?action=getPatients')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getPatients')
       .then(response => {
         console.log(response.data);
         if (Array.isArray(response.data)) {
@@ -93,7 +93,7 @@ const AdminPatients = () => {
     
         try {
           const response = await axios.get(
-            `http://localhost:80/api2/?action=getPatients&limit=${LIMIT}&offset=${offset}`
+            `https://apidentsys.tuplrc-cla.com/api2/?action=getPatients&limit=${LIMIT}&offset=${offset}`
           );
           console.log(response.data)
           setPatients(response.data.patients);

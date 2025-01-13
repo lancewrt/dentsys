@@ -11,7 +11,7 @@ import ViewAppointment from '../ViewAppointment/ViewAppointment';
 import isAuthenticated from '../Auth';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 
 const AdminAppointment = () => {
@@ -51,7 +51,7 @@ const AdminAppointment = () => {
 
   const getAppointment = async () => {
     try {
-      const response = await axios.get("http://localhost:80/api2/?action=getAppointments");
+      const response = await axios.get("https://apidentsys.tuplrc-cla.com/api2/?action=getAppointments");
       setAppointment(response.data); // Update state with fetched data
     } catch (err) {
       console.log(err);
@@ -63,7 +63,7 @@ const AdminAppointment = () => {
     console.log(keyOfSelectedAppointment)
     setLoading(true); // Set loading to true when the request is sent
     try{
-      const response = await axios.put(`http://localhost:80/api2/${id}/?action=accept`, appointment)
+      const response = await axios.put(`https://apidentsys.tuplrc-cla.com/api2/${id}/?action=accept`, appointment)
       console.log(response)
       if(response.status==200){
         setShowConfirm(true);
@@ -79,7 +79,7 @@ const AdminAppointment = () => {
   const finishAppointment = async (id) => {
     console.log(id)
     setLoading(true); // Set loading to true when the request is sent
-    const response = await axios.put(`http://localhost:80/api2/${id}/?action=finish`,{loggedin:loggedin, ...appointment,})
+    const response = await axios.put(`https://apidentsys.tuplrc-cla.com/api2/${id}/?action=finish`,{loggedin:loggedin, ...appointment,})
     if(response.status==200){
       socket.emit('newData');
       setLoading(false);

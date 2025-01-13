@@ -5,7 +5,7 @@ import isAuthenticated from '../Auth'
 import io from 'socket.io-client';
 import ReactDom from 'react-dom';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 const CancelAppointment = ({open, close, keyOfSelectedAppointment, appointments}) => {
   const [appointment, setAppointment] = useState([]);
@@ -16,7 +16,7 @@ const CancelAppointment = ({open, close, keyOfSelectedAppointment, appointments}
   }, []);
 
   const getAppointment =()=> {
-    axios.get('http://localhost:80/api2/?action=getAppointments')
+    axios.get('https://apidentsys.tuplrc-cla.com/api2/?action=getAppointments')
       .then(response => {
         console.log(response.data);
         if (Array.isArray(response.data)) {
@@ -35,7 +35,7 @@ const CancelAppointment = ({open, close, keyOfSelectedAppointment, appointments}
   const cancelAppointment = async (e) => {
     e.preventDefault();
     setLoading(true); // Set loading to true when the request is sent
-    const response = await axios.put(`http://localhost:80/api2/${keyOfSelectedAppointment}/?action=cancel`, appointment);
+    const response = await axios.put(`https://apidentsys.tuplrc-cla.com/api2/${keyOfSelectedAppointment}/?action=cancel`, appointment);
     if(response.status==200){
       socket.emit('newData');
       window.location.reload();

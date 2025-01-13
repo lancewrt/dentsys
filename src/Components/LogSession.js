@@ -22,7 +22,7 @@ const LogSession = () => {
         const ip_address = ipResponse.data.ip;
 
         // Log the session by sending a POST request to your backend
-        const response = await axios.post('http://localhost:80/api2/user/save', {
+        const response = await axios.post('https://apidentsys.tuplrc-cla.com/api2/user/save', {
           action: 'logSession',
           session_id,
           user_agent,

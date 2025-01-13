@@ -9,7 +9,7 @@ import DentalHistory from '../DentalHistory/DentalHistory';
 import isAuthenticated from '../Auth';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 const ViewPatientInfo = () => {
     const [patient, setPatient] = useState();
@@ -36,7 +36,7 @@ const ViewPatientInfo = () => {
 
     const getPatient = async()=> {
         try{
-            const response = await axios.get(`http://localhost:80/api2/${id}/?action=getPatient`);
+            const response = await axios.get(`https://apidentsys.tuplrc-cla.com/api2/${id}/?action=getPatient`);
             console.log(response)
             setPatient(response.data);
         }catch(err){
@@ -46,7 +46,7 @@ const ViewPatientInfo = () => {
     
     const getProcedureHistory = async ()=> {
         try{
-            const response =await axios.get(`http://localhost:80/api2/${id}/?action=getProcedureHistory`);
+            const response =await axios.get(`https://apidentsys.tuplrc-cla.com/api2/${id}/?action=getProcedureHistory`);
             setHistory(response.data);
         }catch(err){
             console.log("Couldn't get dental history. An error occurred: ", err.message)

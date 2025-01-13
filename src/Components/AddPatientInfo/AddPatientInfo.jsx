@@ -8,7 +8,7 @@ import axios from "axios";
 import isAuthenticated from '../Auth';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 const AddPatientInfo = () => {
     const [loading, setLoading] = useState(false);
@@ -42,7 +42,7 @@ const AddPatientInfo = () => {
         }else{
             setLoading(true);
             try {
-                const response = await axios.post("http://localhost:80/api2/user/save", patient).finally(() => setLoading(false));
+                const response = await axios.post("https://apidentsys.tuplrc-cla.com/api2/user/save", patient).finally(() => setLoading(false));
                 // Uncomment the next line if you want to navigate after submission
                 console.log(response)
                 if(response.status==200){

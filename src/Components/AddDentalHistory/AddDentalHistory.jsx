@@ -72,7 +72,7 @@ import selected32 from './../../Assets/Tooth Selected/selected32.png'
 import isAuthenticated from '../Auth';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 
 const AddService = () => {
@@ -325,7 +325,7 @@ const AddService = () => {
 
     const getServices = async ()=>{
         try{
-            const response = await axios.get(`http://localhost:80/api2/?action=getServices`);
+            const response = await axios.get(`https://apidentsys.tuplrc-cla.com/api2/?action=getServices`);
             setServices(response.data)
         }catch(err){
             console.log("Couldn't retrieve services: ", err.message)
@@ -334,7 +334,7 @@ const AddService = () => {
 
     const getOptions = async ()=>{
         try{
-            const response = await axios.get(`http://localhost:80/api2/?action=getOptions`);
+            const response = await axios.get(`https://apidentsys.tuplrc-cla.com/api2/?action=getOptions`);
             setOptions(response.data)
         }catch(err){
             console.log("Couldn't retrieve options: ", err.message)
@@ -343,7 +343,7 @@ const AddService = () => {
 
     const getDentists = async()=>{
         try{
-            const response = await axios.get(`http://localhost:80/api2/?action=getDentists`);
+            const response = await axios.get(`https://apidentsys.tuplrc-cla.com/api2/?action=getDentists`);
             setDentists(response.data)
         }catch(err){
             console.log("Couldn't retrieve options: ", err.message)
@@ -452,7 +452,7 @@ const AddService = () => {
     const handleSave = async ()=>{
         setLoading(true);
             try{
-                const response = await axios.post("http://localhost:80/api2/user/save", dentalHistory).finally(() => setLoading(false));
+                const response = await axios.post("https://apidentsys.tuplrc-cla.com/api2/user/save", dentalHistory).finally(() => setLoading(false));
                 console.log(response)
                 if(response.status==200){
                     socket.emit('newData');

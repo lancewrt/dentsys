@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3001'); // Connect to the Socket.IO server
+const socket = io('https://apidentsys.tuplrc-cla.com:3001'); // Connect to the Socket.IO server
 
 
 const AppointmentCancelledConfirm = () => {
@@ -17,7 +17,7 @@ const AppointmentCancelledConfirm = () => {
     },[])
 
     const cancelAppointment = async () => {
-        const response = await axios.put(`http://localhost:80/api2/${id}/?action=cancel`);
+        const response = await axios.put(`https://apidentsys.tuplrc-cla.com/api2/${id}/?action=cancel`);
         console.log(response.status);
         // if cancelled, emit socket
         if(response.status==200){

@@ -18,7 +18,7 @@ const AuditLogs = () => {
 
     const getAudit = async () => {
         try {
-          const response = await axios.get("http://localhost:80/api2/?action=getAudit");
+          const response = await axios.get("https://apidentsys.tuplrc-cla.com/api2/?action=getAudit");
           setAudits(response.data); // Update state with fetched data
           console.log(response.data);
         } catch (err) {
