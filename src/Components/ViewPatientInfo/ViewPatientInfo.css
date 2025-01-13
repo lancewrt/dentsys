@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  --blue:#31A3B9;
+  --blue-hover:#2c95aa;
+  --lighter-blue: #62d3ea14;
+  --lightest-blue:#31a2b918;
+  --white:#fff;
+  --overlay: #fafafa56;
+  --black:#000;
+  --green: #36CE57;
+  --green2: #31B957;
+  --green-hover: #3bff72;
+  --neon-green:#66ff00;
+  --light-yellow: #ffeec4;
+  --yellow: #B99331;
+  --light-red:#da454518;
+  --red:#B93131;
+  --tomato-hover:#bd0202fb;
+  --tomato-red:#da4545fb;
+  --light-green:#87D99E;
+  --lighter-green: #EBF9F7;
+  --shadow: #a9a9a989;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.view-patient-container {
+    display: flex;
+    width: 100%;
+}
+
+.view-patient-container .content {
+    width: 100%;
+    padding: 30px 50px;
+    min-height: 100vh;
+    margin-left: 18%;
+}
+
+.view-patient-container .back{
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.view-patient-container .view-patient-title{
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.view-patient-container .view-patient-form{
+  background-color: var(--lightest-blue);
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.view-patient-container .view-patient-form-title{
+  color: var(--blue);
+}
+
+.view-patient-container .view-patient-form label{
+  color: var(--blue);
+}
+
+
+.view-patient-container .view-patient-form .edit-record{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.view-patient-container .view-patient-form .edit-record:hover{
+  background-color: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+.view-patient-container .view-patient-form hr{
+  color: var(--blue);
+}
+
+.view-patient-container table{
+  color: #000;
+}
+
+.view-patient-container .table thead tr th,
+.view-patient-container .table tbody tr td{
+  background-color: transparent !important;
+  color: var(--blue);
+  text-transform: capitalize;
+  vertical-align: middle;
+}
+
+
+.view-patient-container .add-service-btn{
+  background-color: var(--blue);
+  height: 50px;
+  color: var(--white);
+  margin-top: 20px;
+}
+
+.view-patient-container .add-service-btn:focus,
+.view-patient-container .add-service-btn:hover
+.view-patient-container .add-service-btn:active{
+  background-color: var(--blue-hover);
+  border-color: var(--blue-hover);
+  color: var(--white);
+}
+
+.view-patient-container .button-view{
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.view-patient-container .button-view:focus,
+.view-patient-container .button-view:hover
+.view-patient-container .button-view:active{
+  background-color: var(--blue-hover);
+  border-color: var(--blue-hover);
+  color: var(--white);
+}

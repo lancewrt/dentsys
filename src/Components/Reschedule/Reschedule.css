@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --lighter-blue: #62d3ea14;
+    --lightest-blue:#31a2b918;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --green: #36CE57;
+    --green2: #31B957;
+    --green-hover: #3bff72;
+    --neon-green:#66ff00;
+    --light-yellow: #ffeec4;
+    --yellow: #B99331;
+    --light-red:#da454518;
+    --red:#B93131;
+    --tomato-hover:#bd0202fb;
+    --tomato-red:#da4545fb;
+    --light-green:#87D99E;
+    --lighter-green: #EBF9F7;
+    --shadow: #a9a9a989;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.resched-container{
+    background-color: var(--overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.resched-card{
+    background-color: var(--white);
+    width: 750px;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
+
+.resched-header{
+    text-align: center;
+    background-color: var(--blue);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resched-patient-info{
+    padding: 30px 50px;
+}
+
+.resched-button-container{
+    display: flex;
+    justify-content: end;
+}
+
+.resched-button{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.resched-button:hover{
+    background-color: #008099;
+    color: var(--white);
+}
+
+
+.close-resched{
+    cursor: pointer;
+}
+
+.spinner-overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100%;
+}
+
+.resched-info{
+    color: var(--blue);
+}
+
+.resched-name{
+    text-transform: capitalize;
+}

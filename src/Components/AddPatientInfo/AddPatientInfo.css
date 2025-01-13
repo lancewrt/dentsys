@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --lighter-blue: #62d3ea14;
+    --lightest-blue:#31a2b918;
+    --lightest-blue2:#b5f3ff73;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --green: #36CE57;
+    --green2: #31B957;
+    --green-hover: #3bff72;
+    --neon-green:#66ff00;
+    --light-yellow: #ffeec4;
+    --yellow: #B99331;
+    --light-red:#da454518;
+    --red:#B93131;
+    --tomato-hover:#bd0202fb;
+    --tomato-red:#da4545fb;
+    --light-green:#87D99E;
+    --lighter-green: #EBF9F7;
+    --shadow: #a9a9a989;
+  }
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.add-patient-box {
+    display: flex;
+    width: 100%;;
+    padding: 0;
+}
+
+.add-patient-box .content{
+    width: 100%;
+    padding: 30px 50px;
+    min-height: 100vh;
+    margin-left: 18%;
+}
+
+.add-patient-box .back{
+    text-decoration: none;
+    color: var(--blue);
+}
+  
+.add-patient-box .add-patient-title{
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.add-patient-box .add-patient-form{
+    background-color: var(--lighter-green);
+    padding: 60px 50px;
+    border-radius: 5px;
+
+}
+
+.add-patient-box .add-patient-form label{
+    color: var(--blue);
+}
+
+.add-patient-box .add-patient-form-title{
+    color: var(--blue);
+}
+
+.add-patient-box .required-field{
+    color: var(--red);
+}
+
+.add-patient-box .button-save{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.add-patient-box .button-save:hover,
+.add-patient-box .button-save:focus,
+.add-patient-box .button-save:active{
+    background-color: var(--blue-hover);
+}
+
+.add-patient-box .spinner-overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100%;
+}

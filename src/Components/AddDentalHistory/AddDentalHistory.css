@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --lighter-blue: #62d3ea14;
+    --lightest-blue:#31a2b918;
+    --lightest-blue2:#b5f3ff73;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --green: #36CE57;
+    --green2: #31B957;
+    --green-hover: #3bff72;
+    --neon-green:#66ff00;
+    --light-yellow: #ffeec4;
+    --yellow: #B99331;
+    --light-red:#da454518;
+    --red:#B93131;
+    --tomato-hover:#bd0202fb;
+    --tomato-red:#da4545fb;
+    --light-green:#87D99E;
+    --lighter-green: #EBF9F7;
+    --shadow: #a9a9a989;
+  }
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.add-dental-history-container{
+    display: flex;
+    width: 100%;
+
+}
+
+.add-dental-history-container .content{
+    width: 100%;
+    padding: 30px 50px;
+    min-height: 100vh;
+    margin-left: 18%;
+}
+
+.add-dental-history-container .back{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+
+.add-dental-history-header h1{
+    color: var(--blue);
+}
+
+.add-dental-history-form{
+    background-color: var(--lightest-blue);
+    padding: 30px 50px;
+    border-radius: 10px;
+    color: var(--blue);
+}
+
+.add-dental-history-form .tooth-chart{
+    /* background-color: #31B957; */
+    padding: 20px 0;
+    display: flex;
+    gap: 50px;
+}
+
+.add-dental-history-form .tooth-chart div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add-dental-history-form .tooth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-dental-history-form .tooth img{
+    width: 50px;
+}
+
+.add-dental-history-form .tooth button{
+    background-color: transparent;
+    border: none;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.hide-tooth-chart{
+    display: none;
+    margin: 0;
+}
+
+.unhide-tooth-chart{
+    display: block;
+}
+
+.add-dental-history-form select{
+    text-transform: capitalize;
+}
+
+.add-dental-history-form .service-name{
+    text-transform: capitalize;
+}
+
+.add-dental-history-container .receipt-container{
+    background-color: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.add-dental-history-container .receipt-header{
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.add-dental-history-container .receipt-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.add-dental-history-container .receipt-info{
+    padding: 50px 20px;
+}
+
+.add-dental-history-container .receipt-info .receipt-procedure{
+    position: relative;
+    left: 200px;
+}
+
+.add-dental-history-container .receipt-info .receipt-cost{
+    position: relative;
+    left: 290px;
+}
+
+.add-dental-history-container .spinner-overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100%;
+}
+
+.add-dental-history-container .receipt-total{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 20px;  padding-right: 100px;
+}
+.add-dental-history-container .receipt-total h6{
+    text-align: end;
+}
+
+.add-dental-history-container .receipt-total p{
+    text-align: center;
+}
+
+.add-dental-history-container .error-message{
+    color: var(--red);
+    font-size: 12px;
+    font-style: italic;
+    margin: 0;
+    margin-top: 3px;
+    /* display: none; */
+}
+
+.add-dental-history-form .save-patient-button{
+    border: none;
+}
+
+.add-dental-history-container .save-patient{
+    background-color: var(--blue);
+    color: var(--white);
+}

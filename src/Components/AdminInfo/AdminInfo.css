@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --lighter-blue: #62d3ea14;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --green: #36CE57;
+    --green2: #31B957;
+    --green-hover: #3bff72;
+    --yellow: #B99331;
+    --red:#B93131;
+    --light-green:#87D99E;
+    --lighter-green: #EBF9F7;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.admin-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: end;    
+}
+
+.admin-info .admin-info-user-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--green);
+    padding:10px 50px;
+    border: none;
+}
+
+.admin-info .admin-info-user-button:active,.admin-info-user-button:focus{
+    border-color: var(--white) !important;
+}
+
+.admin-info .admin-hello, .admin-info-name{
+    color: var(--green);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.admin-info .admin-info-clock, .admin-info-day,.admin-info-date{
+    color: var(--blue) !important;
+}

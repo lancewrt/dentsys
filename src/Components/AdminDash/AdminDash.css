@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --lighter-blue: #62d3ea14;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --green: #36CE57;
+    --green2: #31B957;
+    --green-hover: #3bff72;
+    --yellow: #B99331;
+    --red:#B93131;
+    --light-green:#87D99E;
+    --lighter-green: #EBF9F7;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.admindash-container {
+    display: flex;
+    width: 100%;
+}
+
+
+.admindash-container .content{
+    width: 100%;
+    padding: 30px 50px;
+    min-height: 100vh;
+    margin-left: 18%;
+}
+
+.admindash-container .admin-dash-cards{
+    display: flex;
+    gap: 15px;
+    padding: 0 13px;
+}
+
+.admindash-container .dashboard-card{
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.admindash-container .admin-info-dashtext{
+    color: var(--blue);
+    font-weight: 600;
+    margin: 25px 0;
+    font-size: 2.7rem;
+}
+
+.admindash-container .dashcard-p{
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.admindash-container .total{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.admindash-container .patients-today{
+    background-color: var(--green);
+}
+
+.admindash-container .pending-appointments{
+    background-color: var(--yellow);
+}
+
+.admindash-container .cancelled-appointments{
+    background-color: var(--red);
+}
+
+.admindash-container .recent-visits{
+    background-color: var(--light-green);
+}
+.admindash-container .recent-visit-header{
+    color: var(--blue);
+}
+
+.admindash-container .earnings-today{
+    background-color: var(--blue);
+}
+
+.appointment-today-card{ 
+    border-radius: 10px;
+    background-color: var(--lighter-green);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.admindash-container .row2{
+    display: flex;
+    gap: 25px;
+    padding: 0 13px;
+}
+
+.admindash-container .appointments-today-p{
+    font-size: 1.3rem;
+    color: var(--green);
+    font-weight: 500;
+}
+
+.admindash-container .no-bg-color{
+    background-color: transparent !important; 
+}
+
+.admindash-container .up-app{
+    padding: 30px 30px;
+    background-color: var(--green2);
+    border-radius: 5px;
+
+}
+
+.admindash-container .button-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.admindash-container .up-app-button{
+    background-color: var(--light-green);
+    padding: 10px 30px;
+    margin-top: 50px;
+}
+
+.admindash-container .up-app-button:hover{
+    background-color: var(--green-hover);
+}
+
+
+
+.admindash-container .up-app-text{
+    font-size: 1.3rem;
+    font-weight: 500;
+    
+}
+
+.admindash-container .up-app-label{
+    font-weight: 200;
+}
+
+.admindash-container .up-app-info{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.admindash-container .app-today-info{
+    font-weight: 500;
+    color: var(--green) !important;
+    text-transform: capitalize;
+}
+
+.admindash-container .up-app-link{
+    font-style: italic;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.admindash-container .nothing{
+    font-style: italic;
+    color: var(--green);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.admindash-container .row3{
+    padding: 20px 13px;
+}
+
+.admindash-container .recent-visits-card{
+    background-color: var(--lighter-blue);
+    padding: 30px 50px;
+    border-radius: 5;
+}
+
+.admindash-container .recent-visits-card table thead tr td{ 
+    color: var(--blue);
+}
+
+.admindash-container .nothing2{
+    font-style: italic;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.admindash-container .recent-visit-info{
+    padding-top: 15px !important; 
+    color: var(--blue) !important;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.admindash-container.recent-visit-th{
+    color: var(--blue) !important;
+}
+
+.admindash-container .app-list-th{
+    color: var(--green) !important;
+}
+
+.admindash-container .recent-visit-total-earnings{
+    text-align: end;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    /* margin-right: 240px; */
+}
+
+.admindash-container .rv-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.admindash-container .recent-visit-header, .rv-total-label{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.admindash-container .rv-total-amount{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.admindash-container .rv-button{
+    background-color: var(--blue);
+    padding: 5px 30px;
+    color: var(--white);
+}
+
+.admindash-container .rv-button:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}

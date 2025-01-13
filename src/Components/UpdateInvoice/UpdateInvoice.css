@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  --blue:#31A3B9;
+  --blue-hover:#2c95aa;
+  --lighter-blue: #62d3ea14;
+  --lightest-blue:#31a2b918;
+  --lightest-blue2:#b5f3ff73;
+  --white:#fff;
+  --overlay: #fafafa56;
+  --black:#000;
+  --green: #36CE57;
+  --green2: #31B957;
+  --green-hover: #3bff72;
+  --neon-green:#66ff00;
+  --light-yellow: #ffeec4;
+  --yellow: #B99331;
+  --light-red:#da454518;
+  --red:#B93131;
+  --tomato-hover:#bd0202fb;
+  --tomato-red:#da4545fb;
+  --light-green:#87D99E;
+  --lighter-green: #EBF9F7;
+  --shadow: #a9a9a989;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.update-invoice-container {
+    display: flex;
+    width: 100%;
+}
+
+.update-invoice-container .content {
+    width: 100%;
+    padding: 30px 50px;
+    min-height: 100vh;
+    margin-left: 18%;
+}
+
+.update-invoice-container .content .back{
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.update-invoice-container .invoice-detail-header{
+  background-color: var(--blue);
+  border-radius: 5px 5px 0 0;
+  padding: 0;
+  margin: 0;
+
+}
+
+.update-invoice-container .invoice-detail-header-text{
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  
+}
+
+.update-invoice-container .invoice-detail-info{
+  background-color: var(--lighter-green);
+  margin-top: 20px;
+  color: var(--blue);
+}
+
+.update-invoice-container .invoice-user-info{
+  padding: 50px 200px;
+}
+
+.update-invoice-container .cost-header{
+  padding: 20px 200px;
+}
+
+.update-invoice-container .price{
+  padding: 20px 150px;
+  color: var(--blue);
+}
+
+.update-invoice-container .price li,.price .invoice-total{
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.update-invoice-container .invoice-total-price{
+  background-color: #31a2b92a;
+  padding: 20px;
+  margin: 0;
+}
+
+.update-invoice-container .invoice-payment-details{
+  background-color: #fff;
+  width: 80%;
+  padding: 20px 50px;
+  border-radius: 6px;
+}
+
+.update-invoice-container .invoice-payment{
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 60%;
+}
+
+.update-invoice-container .invoice-update-button2{
+  background-color: #31A3B9;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.update-invoice-container .invoice-update-button2:hover, 
+.update-invoice-container .invoice-update-button2:active{
+    background-color: #098199;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+  }
+
+.update-invoice-container .invoice-balance{
+  color: #36CE57;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.update-invoice-container .edit-invoice{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding: 0 100px;
+    color: var(--blue);
+}
+
+.update-invoice-container .inv_input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #31A3B9;
+}
+
+.update-invoice-container .update-inv-info, .update-status{
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.update-invoice-container .price .total-amount-paid{
+  font-weight: 600;
+}
+
+.update-invoice-container .update-nothing-follows{
+  color: var(--blue);
+  font-size: 0.8rem;
+}
+
+.update-invoice-container .edit-invoice label{
+  margin-bottom: 5px;
+}
+
+.update-invoice-container .error-message{
+  color: var(--red);
+  font-size: 0.8rem;
+  font-style: italic;
+}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --light-blue: #EBF9F7;
+    --red: #ff0000;
+}
+
+
+.appoinment-container{
+    padding: 0;
+    
+}
+.appoinment-container h1{
+    color: var(--blue);
+}
+
+.appoinment-container .appointment-row{
+    width: 100%;
+    margin-top: 30px;
+    
+    
+}
+.appoinment-container .input-form{
+    text-transform: capitalize;
+}
+
+.appoinment-container .patient-info{
+    background-color: var(--light-blue);
+    padding: 50px 80px;
+}
+
+.appoinment-container .patient-info-text{
+    color: var(--blue);
+}
+
+.appoinment-container .labels, .time-text, .labels-email{
+    color: var(--blue);
+}
+
+.appoinment-container .labels{
+    text-transform: capitalize;
+}
+
+.appoinment-container .appointment-summary{
+    background-color: var(--light-blue);
+    padding: 50px 60px;
+    margin: 0 30px; 
+}
+
+.appoinment-container .appointment-summary .client{
+    word-wrap: break-word;
+}
+
+.appoinment-container .submit-button{
+    background-color: var(--blue);
+    color: var(--white);
+    width: 70%;
+    padding: 13px 0;
+}
+
+.appoinment-container .submit-button:active, .submit-button:hover{
+    border: none;
+    background-color: var(--blue-hover);
+    color: var(--white);
+}
+
+.appoinment-container .reminder{
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.appoinment-container .required-field{
+    color: var(--red);
+}
+
+.appoinment-container .client{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.appoinment-container .form{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.appoinment-container .spinner-overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100%;
+}
+
+.appoinment-container .error-message{
+    color: var(--red);
+    font-size: 12px;
+    font-style: italic;
+    margin: 0;
+    margin-top: 3px;
+    /* display: none; */
+}
+
+@media screen and (max-width: 1000px) {
+
+    .appoinment-container .patient-info{
+        margin-bottom: 20px;
+    }
+
+    .appoinment-container .appointment-summary{
+        padding: 50px 60px;
+        margin: 0 0px; 
+    }
+}
+

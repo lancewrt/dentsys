@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --blue:#31A3B9;
+    --blue-hover:#2c95aa;
+    --lighter-blue: #62d3ea14;
+    --lightest-blue:#31a2b918;
+    --white:#fff;
+    --overlay: #fafafa56;
+    --black:#000;
+    --green: #36CE57;
+    --green2: #31B957;
+    --green-hover: #3bff72;
+    --neon-green:#66ff00;
+    --light-yellow: #ffeec4;
+    --yellow: #B99331;
+    --light-red:#da454518;
+    --red:#B93131;
+    --tomato-hover:#bd0202fb;
+    --tomato-red:#da4545fb;
+    --light-green:#87D99E;
+    --lighter-green: #EBF9F7;
+    --shadow: #a9a9a989;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+}
+
+.accounts-container{
+    display: flex;
+}
+
+.accounts-container .content{
+    width: 100%;
+    padding: 30px 50px;
+    min-height: 100vh;
+    margin-left: 18%;
+}
+
+.accounts-container .accounts-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accounts-container .accounts-header h1{
+    color: var(--blue);
+    font-weight: 600;
+    margin: 25px 0;
+    font-size: 2.7rem;
+}
+
+.accounts-container .add-account{
+    background-color: var(--blue);
+    height: 50px;
+    color: var(--white);
+}
+
+.accounts-container .add-account:focus,
+.accounts-container .add-account:hover
+.accounts-container .add-account:active{
+    background-color: var(--blue-hover);
+    border-color: var(--blue-hover);
+    color: var(--white);
+}
+
+.accounts-container .search-bar{
+    width: 100%;
+    padding: 10px 20px 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-color: var(--light-gray);
+    border: none;
+ }
+
+.accounts-container .button-group {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.accounts-container .btn-alphabet {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.accounts-container .button-group button:hover {
+    background-color: #ddd;
+    border-color: transparent;
+}
+  
+.accounts-container .button-group .btn-selected {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+/* .accounts-container .accounts-column{
+    text-align: center;
+    background-color: var(--blue);
+    padding: 15px;
+    color: var(--white);
+    border-radius: 8px;
+} */
+
+.accounts-container .user-name{
+    justify-content: left;
+}
+
+.accounts-container .user-accounts{
+    background-color: var(--lightest-blue);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.accounts-container .user-accounts .col{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+.accounts-container .edit-user-button{
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.accounts-container .remove-user-button{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: var(--red);
+    gap: 10px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.accounts-container .pagination-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+ }
+ 
+ .accounts-container .prev-next-btn button{
+    background-color: var(--blue);
+    color: var(--white);
+    height: 40px;
+ }
+ 
+ .accounts-container .prev-next-btn button:hover,
+ .accounts-container .prev-next-btn button:active,
+ .accounts-container .prev-next-btn button:focus{
+    background-color: var(--blue-hover);
+    border-color: var(--blue-hover);
+    color: var(--white);
+ }
+ 
+ .accounts-container.prev-next-btn .hide-button{
+    background-color: var(--shadow);
+ }
+ 
+ .accounts-container .button-view{
+    background-color: var(--blue);
+    color: var(--white);
+ }
